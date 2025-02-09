@@ -1,4 +1,6 @@
 import React from 'react'
+import {NavLink , Link} from 'react-router-dom'
+
 
 const Navber = () => {
     return (
@@ -15,10 +17,10 @@ const Navber = () => {
                 />
                 <div>
                     <ul className="flex gap-5 text-white">
-                        <li className='cursor-pointer'><a>Home</a></li>
-                        <li className='cursor-pointer'><a>About Us</a></li>
-                        <li className='cursor-pointer'><a>Contact Us</a></li>
-                        <li className='cursor-pointer'><a>Help</a></li>
+                        <li className='cursor-pointer'><NavLink to="/">Home</NavLink></li>
+                        <li className='cursor-pointer'><NavLink to="/about">About Us</NavLink></li>
+                        <li className='cursor-pointer'><NavLink to="/mobile">Contact Us</NavLink></li>
+                        <li className='cursor-pointer'><NavLink to="/help">Help</NavLink></li>
                     </ul>
                 </div>
             </div>

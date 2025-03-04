@@ -3,6 +3,7 @@ import { useState,useEffect } from 'react';
 import Products from "./Products"
 
 
+
 import img1 from "./img1.png";
 import img2 from "./img2.jpg";
 import img3 from "./img3.jpg";
@@ -151,6 +152,7 @@ const Home = () => {
           {loadingPhones && <p>Loading phones...</p>}
           {errorPhones && <p className="text-red-500">Error: {errorPhones}</p>}
 
+          
           {!loadingPhones && !errorPhones && products.length > 0 && (
             <>
               <div className="grid grid-cols-4 gap-4">
@@ -167,6 +169,7 @@ const Home = () => {
               </button>
             </>
           )}
+          
 
           {!loadingPhones && !errorPhones && products.length === 0 && (
             <p>No products found.</p>
@@ -180,6 +183,7 @@ const Home = () => {
           {loadingShoes && <p>Loading shoes...</p>}
           {errorShoes && <p className="text-red-500">Error: {errorShoes}</p>}
 
+          
           {!loadingShoes && !errorShoes && shoes.length > 0 && (
             <>
               <div className="grid grid-cols-4 gap-4">
@@ -196,6 +200,7 @@ const Home = () => {
               </button>
             </>
           )}
+         
 
           {!loadingShoes && !errorShoes && shoes.length === 0 && (
             <p>No products found.</p>
@@ -209,6 +214,7 @@ const Home = () => {
           {loadinglaptop && <p>Loading shoes...</p>}
           {errorlaptop && <p className="text-red-500">Error: {errorlaptop}</p>}
 
+          
           {!loadinglaptop && !errorlaptop && laptop.length > 0 && (
             <>
               <div className="grid grid-cols-4 gap-4">
@@ -225,6 +231,7 @@ const Home = () => {
               </button>
             </>
           )}
+          
 
           {!loadinglaptop && !errorlaptop && laptop.length === 0 && (
             <p>No products found.</p>

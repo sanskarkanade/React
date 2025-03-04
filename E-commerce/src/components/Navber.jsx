@@ -1,8 +1,11 @@
 import React from 'react'
 import {NavLink , Link} from 'react-router-dom'
+import { useState } from 'react'
 
 
-const Navber = () => {
+const Navber = ({onsearchchange}) => {
+    const [input, setinput] = useState("")
+
     return (
         <div>
             <div className="h-16 bg-blue-500 flex items-center justify-between px-6 fixed w-full">
@@ -10,11 +13,15 @@ const Navber = () => {
                     <div><img src='./src/assets/logo1.jpg' className='h-5 w-5'></img></div>
                     <p>Eshany Bazzar</p>
                 </div>
+                <div>
                 <input
                     type="text"
                     placeholder="Search items here"
                     className="bg-white h-8 w-96 px-3 border-none outline-none focus:border-b-2 focus:border-cyan-700"
+                    onChange={(e) =>{setinput(e.target.value)}}
                 />
+                <NavLink to="/search" onClick={() => {onsearchchange(input)}}className="bg-blue-950 p-2 text-white">Search</NavLink>
+                </div>
                 <div>
                     <ul className="flex gap-5 text-white">
                         <li className='cursor-pointer'><NavLink to="/">Home</NavLink></li>

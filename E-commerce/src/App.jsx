@@ -7,6 +7,7 @@ import Help from "./components/Help";
 import Mobile from "./components/Mobile";
 import Search from "./components/Search";
 import Sresult from "./components/Sresult";
+import Cart from "./components/cart";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/about" element={<About/>}/>
           <Route path="/mobile" element={<Mobile/>}/>
           <Route path="/help" element={<Help/>}/>
+          <Route path="/cart" element={<Cart/>}/>
           <Route path="/search" element={<Search searchQuery={searchQuery}/>}/>
           <Route path="/result/:id" element={<Sresult/>}/>
         </Routes>

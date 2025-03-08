@@ -1,9 +1,12 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { addToCart } from "../cart/cartslice.js";
 
 const Sresult = () => {
   const location = useLocation();
   const product = location.state?.product;
+  const dispatch = useDispatch();
 
   if (!product) return <h2>No product data</h2>;
 
@@ -20,6 +23,11 @@ const Sresult = () => {
   
     {/* Description */}
     <p className="text-gray-600 mt-2">{product.description}</p>
+
+    <button onClick={() => dispatch(addToCart(product)) } 
+                 className="mt-2 bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-600">
+                    Add to Cart
+                </button>
   
     {/* Availability Status */}
     <p className="mt-2">

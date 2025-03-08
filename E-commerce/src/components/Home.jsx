@@ -4,7 +4,7 @@ import Products from "./Products"
 
 
 
-import img1 from "./img1.png";
+import img1 from "./img1.jpg";
 import img2 from "./img2.jpg";
 import img3 from "./img3.jpg";
 import img4 from "./img4.jpg";
@@ -135,19 +135,19 @@ const Home = () => {
 
 
   return (
-    <div>
+    <div className='bg-white'>
       <main>
         {/* Image Slider */}
         <div className="image-container pt-16">
           <img
             src={images[currentImage]}
-            className="w-full h-auto object-cover transition-all duration-500"
+            className="w-full h-250 object-cover transition-all duration-500"
           />
         </div>
 
         {/* Phones Section */}
         <div className="p-6">
-          <h2 className="text-2xl font-bold mb-4">Mobile Phones</h2>
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Mobile Phones</h2>
 
           {loadingPhones && <p>Loading phones...</p>}
           {errorPhones && <p className="text-red-500">Error: {errorPhones}</p>}
@@ -178,7 +178,7 @@ const Home = () => {
 
         {/* Shoes Section */}
         <div className="p-6">
-          <h2 className="text-2xl font-bold mb-4">Men's Wear - Shoes</h2>
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Men's Wear - Shoes</h2>
 
           {loadingShoes && <p>Loading shoes...</p>}
           {errorShoes && <p className="text-red-500">Error: {errorShoes}</p>}
@@ -209,7 +209,7 @@ const Home = () => {
 
         {/* Shoes Section */}
         <div className="p-6">
-          <h2 className="text-2xl font-bold mb-4">Laptops</h2>
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Laptops</h2>
 
           {loadinglaptop && <p>Loading shoes...</p>}
           {errorlaptop && <p className="text-red-500">Error: {errorlaptop}</p>}

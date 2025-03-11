@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div>
       <footer>
-        <div className="bg-black text-white h-50 flex flex-col justify-center items-center gap-7 text-2xl">
+        <div className="bg-black text-white p-10 sm:h-50 flex flex-col justify-center items-center gap-7 text-2xl">
           <p>© 2025 All rights reserved. | Terms of Service | Privacy Policy | Made by Sanskar Kanade</p>
           <div className="flex gap-4 items-center">
             <p>Connect me on </p>

@@ -25,7 +25,7 @@ const Search = ({ searchQuery }) => {
     }, [searchQuery]);
 
     return (
-        <div className="pt-16 max-w-6xl mx-auto">
+        <div className="sm:pt-16 max-w-6xl mx-auto pt-28">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 🔎 Search Results for: <span className="text-blue-600">{searchQuery}</span>
             </h2>

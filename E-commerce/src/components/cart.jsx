@@ -10,7 +10,7 @@ const Cart = () => {
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
-    <div className="mt-10 pt-16 p-6 max-w-4xl mx-auto bg-white shadow-lg rounded-lg min-h-96">
+    <div className="mt-10 sm:pt-16 pt-28 h-screen p-6 max-w-4xl mx-auto bg-white shadow-lg rounded-lg sm:min-h-96">
       <h2 className="text-3xl font-bold text-gray-900 mb-6">🛒 Shopping Cart</h2>
 
       {cartItems.length === 0 ? (

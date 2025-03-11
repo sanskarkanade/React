@@ -138,10 +138,10 @@ const Home = () => {
     <div className='bg-white'>
       <main>
         {/* Image Slider */}
-        <div className="image-container pt-16">
+        <div className="image-container pt-24 sm:pt-16">
           <img
             src={images[currentImage]}
-            className="w-full h-250 object-cover transition-all duration-500"
+            className="w-full sm:h-250 object-cover transition-all duration-500 "
           />
         </div>
 
@@ -155,7 +155,7 @@ const Home = () => {
           
           {!loadingPhones && !errorPhones && products.length > 0 && (
             <>
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid sm:grid-cols-4 gap-4">
                 {currentProducts.map((product) => (
                   <Products key={product.id} product={product} />
                 ))}
@@ -163,7 +163,7 @@ const Home = () => {
 
               <button
                 onClick={nextPhones}
-                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hidden sm:block"
               >
                 Next Products ➡️
               </button>
@@ -186,7 +186,7 @@ const Home = () => {
           
           {!loadingShoes && !errorShoes && shoes.length > 0 && (
             <>
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid sm:grid-cols-4 gap-4">
                 {currentShoes.map((product) => (
                   <Products key={product.id} product={product} />
                 ))}
@@ -194,7 +194,7 @@ const Home = () => {
 
               <button
                 onClick={nextShoes}
-                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hidden sm:block"
               >
                 Next Products ➡️
               </button>
@@ -217,7 +217,7 @@ const Home = () => {
           
           {!loadinglaptop && !errorlaptop && laptop.length > 0 && (
             <>
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid sm:grid-cols-4 gap-4">
                 {currentlaptop.map((product) => (
                   <Products key={product.id} product={product} />
                 ))}
@@ -225,7 +225,7 @@ const Home = () => {
 
               <button
                 onClick={nextlaptop}
-                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hidden sm:block"
               >
                 Next Products ➡️
               </button>

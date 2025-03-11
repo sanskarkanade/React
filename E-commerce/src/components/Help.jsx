@@ -2,7 +2,7 @@ import React from "react";
 
 const Help = () => {
   return (
-    <div className="p-6 pt-18">
+    <div className="p-6 pt-32 sm:pt-18 mb-28">
       <h2 className="text-2xl font-bold mb-4">Help & Support</h2>
 
       <section className="mb-6">

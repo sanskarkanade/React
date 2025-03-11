@@ -11,7 +11,7 @@ const Sresult = () => {
   if (!product) return <h2>No product data</h2>;
 
   return (
-    <div className="pt-20 max-w-xl mx-auto bg-white shadow-lg rounded-lg p-6">
+    <div className=" pt-24 sm:pt-20 max-w-xl mx-auto bg-white shadow-lg rounded-lg p-6 h-screen">
     {/* Product Image */}
     <img src={product.thumbnail} alt={product.title} className="w-full h-64 object-contain rounded-lg shadow-md" />
   

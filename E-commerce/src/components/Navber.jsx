@@ -31,7 +31,8 @@ const Navber = ({ onsearchchange }) => {
                 <NavLink to="/help">Help</NavLink>
               </button>
               <button className="cursor-pointer hover:bg-yellow-300 transition border text-center p-3 rounded-2xl">
-                <NavLink to="/cart"> View Cart</NavLink>
+                <NavLink to="/login"> Login</NavLink>
+                
               </button>
             </div>
         </div>

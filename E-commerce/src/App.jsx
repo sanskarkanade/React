@@ -12,6 +12,8 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/login";
 import Register from "./components/register";
+import ProfilePage from "./components/ProfilePage";
+import AddProduct from "./components/addProduct";
 
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
           <Route path="/result/:id" element={<Sresult/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
+          <Route path="/add" element={<AddProduct/>}/>
+          <Route path="/profile" element={<ProfilePage/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>

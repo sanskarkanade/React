@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    username: "",
     email: "",
     password: "",
     role: "",
@@ -52,7 +52,7 @@ const Register = () => {
             <label className="block text-sm font-medium mb-1">Name</label>
             <input
               type="text"
-              name="name"
+              name="username"
               required
               value={formData.name}
               onChange={handleChange}

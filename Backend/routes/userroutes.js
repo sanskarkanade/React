@@ -1,12 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const {updateUserProfile ,loginUser ,registerUser} = require("../controller/userController");
+const { updateUserProfile, loginUser, registerUser } = require("../controller/userController");
+const { protect } = require("../middleware/authMiddleware");
 
-//user login
-router.post("/login",loginUser);
+// @route   POST /api/user/login
+router.post("/login", loginUser);
 
-//user register
-router.post("/register",registerUser);
+// @route   POST /api/user/register
+router.post("/register", registerUser);
 
-//update profile
-router.put("/profile",updateUserProfile);
+// @route   PUT /api/user/profile (Protected Route)
+router.put("/profile", protect, updateUserProfile);
+
+module.exports = router;

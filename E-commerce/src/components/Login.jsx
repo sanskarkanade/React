@@ -30,6 +30,7 @@ const Login = () => {
 
       // Save token or user info (if returned)
       localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
       navigate("/"); // Redirect to homepage or dashboard
     } catch (err) {
       setError("Something went wrong!");

@@ -8,12 +8,14 @@ exports.getAllProduct = async (req, res) => {
 
     if (category) filter.category = category;
     if (featured) filter.featured = featured === "true";
-    if (search) {
-      filter.title = { $regex: search, $options: "i" };
-    }
 
-    console.log("Search Query:", search);
-    console.log("MongoDB Filter:", filter);
+    if (search) {
+      filter.$or = [
+        { title: { $regex: search, $options: "i" } },
+        { description: { $regex: search, $options: "i" } },
+        { category: { $regex: search, $options: "i" } },
+      ];
+    }
 
     const products = await Product.find(filter);
     res.status(200).json(products);

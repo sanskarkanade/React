@@ -4,14 +4,14 @@ const bcrypt = require("bcryptjs");
 
 //token generation
 const generateToken = (id)=>{
-    jwt.sign({id}, process.env.JWT_SECRET, {expiresIn : process.env.JWT_EXPIRES_IN});   
+   return jwt.sign({id}, process.env.JWT_SECRET, {expiresIn : process.env.JWT_EXPIRES_IN});   
 }
 
 
 //post /api/user/register
 exports.registerUser = async(req ,res) =>{
     try {
-        const {username ,email ,password} = req.body;
+        const {username ,email ,password ,isAdmin} = req.body;
         const search = await User.findOne({email});
         if(search) return res.status(400).json({message:"User already exists"});
 
@@ -19,13 +19,13 @@ exports.registerUser = async(req ,res) =>{
         const hash = await bcrypt.hash(password,salt);
 
         const user = await User.create({
-            username ,email ,password:hash
+            username ,email ,isAdmin, password:hash
         });
 
         res.status(200).json({
             message:"User registerd",
             token:generateToken(user._id),
-            user:{id:user._id ,username:user.username ,email:user.email}
+            user:{id:user._id ,username:user.username ,email:user.email ,isAdmin:user.isAdmin}
         });
     } catch (error) {
         res.status(500).json({message:"Registeration failed",error});
@@ -45,7 +45,7 @@ exports.loginUser = async(req ,res) =>{
         res.status(200).json({
             message:"User logged in",
             token:generateToken(user._id),
-            user:{id:user._id ,username:user.username ,email:user.email}
+            user:{id:user._id ,username:user.username ,email:user.email ,isAdmin:user.isAdmin}
         });
     } catch (error) {
         res.status(500).json({message:"Login failed",error});

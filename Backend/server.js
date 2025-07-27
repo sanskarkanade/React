@@ -16,6 +16,7 @@ app.use(express.json());
 //routes
 app.use("/api/product",require("./routes/productroutes"));
 app.use("/api/user", require("./routes/userroutes"));
+app.use("/api/cart", require("./routes/cartroutes"));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT,()=>{console.log(`Server running on port ${PORT}`)});
